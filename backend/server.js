@@ -12,6 +12,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3000;
 const execFileAsync = promisify(execFile);
 
